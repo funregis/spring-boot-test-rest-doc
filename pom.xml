@@ -4,6 +4,11 @@
 	<groupId>com.altari</groupId>
 	<artifactId>spring-ws-rest-doc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<parent>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-parent</artifactId>
+	    <version>1.3.5.RELEASE</version>
+	</parent>
 	<developers>
 		<developer>
 			<name>Régis LIMARE</name>
@@ -11,41 +16,14 @@
 		</developer>
 	</developers>
 	<inceptionYear>2016</inceptionYear>
-
+	
 	<properties>
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring-boot.version>1.3.5.RELEASE</spring-boot.version>
+		<spring-data-releasetrain.version>Hopper-SR1</spring-data-releasetrain.version>
+		<spring-restdocs.version>1.1.0.RELEASE</spring-restdocs.version>
 	</properties>
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>org.springframework.data</groupId>
-				<artifactId>spring-data-releasetrain</artifactId>
-				<version>Hopper-SR1</version>
-				<scope>import</scope>
-				<type>pom</type>
-			</dependency>
-			<dependency>
-				<!-- import de la gestion des dépendances spring-boot -->
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-dependencies</artifactId>
-				<version>${spring-boot.version}</version>
-				<type>pom</type>
-				<scope>import</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.restdocs</groupId>
-				<artifactId>spring-restdocs-mockmvc</artifactId>
-				<version>1.1.0.RELEASE</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.restdocs</groupId>
-				<artifactId>spring-restdocs-core</artifactId>
-				<version>1.1.0.RELEASE</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
+	
 	<dependencies>
 		<!-- permet de faire du spring mvc -->
 		<dependency>
