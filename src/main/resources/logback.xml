@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true" scanPeriod="300 seconds" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="logback.xsd">
+    <include resource="org/springframework/boot/logging/logback/base.xml"/>
+    
+    <logger name="org.springframework.web" level="INFO"/>
+    <logger name="org.springframework.data.jpa" level="INFO"/>
+    <logger name="org.springframework.data.rest" level="INFO"/>
+    
+    <logger name="com.altari.spring.ws" level="DEBUG"/>
+    
+</configuration>

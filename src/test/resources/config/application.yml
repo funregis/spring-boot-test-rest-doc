@@ -1,0 +1,50 @@
+server: 
+  sessionTimeout: 30
+
+spring:
+  application:
+    name: SpringBoot-natixis
+    
+  h2:
+    console:
+      enabled: true
+# ===============================
+# = REST
+# ===============================
+  data: 
+    rest: {base-path: /api,default-page-size: 10,max-page-size: 20} 
+# ===============================
+# = DATA SOURCE
+# ===============================
+  datasource:
+    plateform: h2
+    url: jdbc:h2:mem:testDBH2;MODE=Oracle
+    name:
+    username:
+    password:
+    data: classpath*:h2/data-h2.sql
+    initialize: true
+    # Obligatoire pour que les données insérées soient en UTF-8
+    sqlScriptEncoding: UTF-8
+# ===============================
+# = JPA / HIBERNATE
+# ===============================
+  jpa:
+    database-platform: com.altari.spring.ws.util.FixedH2Dialect
+    database: H2
+    open-in-view: false
+    show_sql: true
+    hibernate:
+      ddl-auto: create
+      naming-strategy: org.springframework.boot.orm.jpa.hibernate.SpringNamingStrategy
+    properties:
+      hibernate.cache.use_second_level_cache: false
+      hibernate.cache.use_query_cache: false
+      hibernate.generate_statistics: false
+      #hibernate.hbm2ddl.auto: none
+# ===============================
+# = LOGGING
+# ===============================
+logging: 
+  file: 'C:\Program Files (x86)\Developpements\logs\spring-boot-test.log' 
+

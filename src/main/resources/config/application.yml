@@ -1,0 +1,84 @@
+server: 
+  sessionTimeout: 30
+
+spring:
+  application:
+    name: SpringBoot-natixis
+# ===============================
+# = Batch
+# ===============================    
+#désactive le lancement automatique des jobs
+  batch: 
+    job: 
+      enabled: false
+# ===============================
+# = REST
+# ===============================
+  data: 
+    rest: {base-path: /api,default-page-size: 10,max-page-size: 20} 
+# ===============================
+# = MVC
+# ===============================
+  mvc:
+    favicon:
+      enabled: false
+# ===============================
+# = DATA SOURCE
+# ===============================
+  datasource:
+    url: <url database>
+    username: <username>
+    password: <mdp>
+
+    # Keep the connection alive if idle for a long time (needed in production)
+    testWhileIdle: true
+    validationQuery: SELECT 1 from dual
+# ===============================
+# = JPA / HIBERNATE
+# ===============================
+  # Show or not log for each sql query
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
+
+  # Allows Hibernate to generate SQL optimized for a particular DBMS
+  properties:
+    hibernate:
+      dialect: org.hibernate.dialect.Oracle10gDialect
+# ===============================
+# = Cache
+# ===============================
+  cache:
+    jcache:
+      config: classpath:cache/ehcache.xml
+# ===============================
+# = REMOTE SHELL
+# ===============================
+shell:
+  auth:
+    simple:
+      user: {name: adminssh,password: adminssh}     
+  ssh:
+    port: 2001
+# ===============================
+# = LOGGING
+# ===============================
+logging: 
+  file: 'C:\Program Files (x86)\Developpements\logs\spring-boot.log' 
+# ===============================
+# = JMX
+# ===============================
+#desactive l'expostion jmx
+endpoints:
+  jmx:
+    enabled: false
+# ===============================
+# = Security
+# ===============================
+management:
+  security:
+    role: SUPERUSER
+  #regroupe les actuators sous cette url
+  context-path: /manage

@@ -1,0 +1,87 @@
+= Ressource Adresses
+
+== #POST# /api/adresses/search/find-by-criteria
+
+*requête*
+
+include::{snippets}/test-adresses/find-by-criteria/http-request.adoc[]
+
+*description de la requête*
+
+include::{snippets}/test-adresses/find-by-criteria/request-fields.adoc[]
+
+*réponse*
+
+include::{snippets}/test-adresses/find-by-criteria/http-response.adoc[]
+
+*description de la réponse*
+
+include::{snippets}/test-adresses/find-by-criteria/response-fields.adoc[]
+
+*test curl*
+
+include::{snippets}/test-adresses/find-by-criteria/curl-request.adoc[]
+
+== #GET# /api/adresses/{entier}
+
+*description* 
+
+permet d'accéder à l'adresse d'id technique {entier}
+
+*requête*
+
+include::{snippets}/test-adresses/find-by-id/http-request.adoc[]
+
+*réponse*
+
+include::{snippets}/test-adresses/find-by-id/http-response.adoc[]
+
+*description de la réponse*
+
+include::{snippets}/test-adresses/find-by-id/response-fields.adoc[]
+
+*test curl*
+
+include::{snippets}/test-adresses/find-by-id/curl-request.adoc[]
+
+== #POST# /api/adresses
+
+*description* 
+
+permet de créer une adresse
+
+*requête*
+
+include::{snippets}/test-adresses/create/http-request.adoc[]
+
+*description de la requête*
+
+include::{snippets}/test-adresses/create/request-fields.adoc[]
+
+*entête de la réponse*
+
+include::{snippets}/test-adresses/create/response-headers.adoc[]
+
+*réponse*
+
+include::{snippets}/test-adresses/create/http-response.adoc[]
+
+*test curl*
+
+include::{snippets}/test-adresses/create/curl-request.adoc[]
+
+== #DELETE# /api/adresses/{entier}
+
+include::{snippets}/test-adresses/delete-adresse/path-parameters.adoc[]
+
+*description* 
+
+permet de supprimer l'adresse d'id technique {entier}
+
+*requête*
+
+include::{snippets}/test-adresses/delete-adresse/http-request.adoc[]
+
+*test curl*
+
+include::{snippets}/test-adresses/delete-adresse/curl-request.adoc[]

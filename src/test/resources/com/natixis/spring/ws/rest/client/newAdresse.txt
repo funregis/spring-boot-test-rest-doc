@@ -1,0 +1,13 @@
+{
+    "rue": "7, Avenue du Mar",
+    "codePostal": "12000",
+    "ville": "Arpajon-sur-",
+    "codePostaln": "93100",
+    "villen": "Drancy",
+    "pays": {
+        "idTec": 1
+    },
+    "paysn": {
+       "idTec": 1
+    }
+}

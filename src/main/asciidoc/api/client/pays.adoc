@@ -1,0 +1,85 @@
+= Ressource Pays
+
+== #GET# /api/pays
+
+*requête*
+
+include::{snippets}/test-pays/find-all/http-request.adoc[]
+
+*réponse*
+
+include::{snippets}/test-pays/find-all/http-response.adoc[]
+
+*description de la réponse*
+
+include::{snippets}/test-pays/find-all/response-fields.adoc[]
+
+*test curl*
+
+include::{snippets}/test-pays/find-all/curl-request.adoc[]
+
+== #GET# /api/test-pays/{entier}
+
+*description*
+
+permet d'accéder à la ressource d'id technique {entier}
+
+*requête*
+
+include::{snippets}/test-pays/find-by-id/http-request.adoc[]
+
+*réponse*
+
+include::{snippets}/test-pays/find-by-id/http-response.adoc[]
+
+*description de la réponse*
+
+include::{snippets}/test-pays/find-by-id/response-fields.adoc[]
+
+*test curl*
+
+include::{snippets}/test-pays/find-by-id/curl-request.adoc[]
+
+== #GET# /api/test-pays/search/find-by-partial-nationalite
+
+*description*
+
+Permet d'effectuer une recherche de nationnalité avec un libellé partiel
+
+*requête*
+
+include::{snippets}/test-pays/find-nationalite-by-partial-nationnalite/http-request.adoc[]
+
+*réponse*
+
+include::{snippets}/test-pays/find-nationalite-by-partial-nationnalite/http-response.adoc[]
+
+*description de la réponse*
+
+include::{snippets}/test-pays/find-nationalite-by-partial-nationnalite/response-fields.adoc[]
+
+*test curl*
+
+include::{snippets}/test-pays/find-nationalite-by-partial-nationnalite/curl-request.adoc[]
+
+== #GET# /api/test-pays/search/find-pays-by-libelle
+
+*description* 
+
+Permet d'effectuer une recherche d'un pays via son libellé exact
+
+*requête*
+
+include::{snippets}/test-pays/find-pays-by-libelle/http-request.adoc[]
+
+*réponse*
+
+include::{snippets}/test-pays/find-pays-by-libelle/http-response.adoc[]
+
+*description de la réponse*
+
+include::{snippets}/test-pays/find-pays-by-libelle/response-fields.adoc[]
+
+*test curl*
+
+include::{snippets}/test-pays/find-pays-by-libelle/curl-request.adoc[]

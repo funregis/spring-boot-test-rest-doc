@@ -1,0 +1,34 @@
+
+
+<config
+    xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+    xmlns='http://www.ehcache.org/v3'  
+    xmlns:jsr107='http://www.ehcache.org/v3/jsr107'>  
+
+  <service>
+    <jsr107:defaults>
+      <jsr107:cache name="pays" template="heap-cache"/>
+      <jsr107:cache name="civilite" template="heap-cache"/>  
+    </jsr107:defaults>
+  </service>
+
+  <cache-template name="heap-cache">
+    <listeners>    
+      <listener>
+        <!-- log les accès au cache -->
+        <class>com.altari.spring.ws.logger.EventLogger</class>
+        <event-firing-mode>ASYNCHRONOUS</event-firing-mode>
+        <event-ordering-mode>UNORDERED</event-ordering-mode>
+        <events-to-fire-on>CREATED</events-to-fire-on> 
+        <events-to-fire-on>UPDATED</events-to-fire-on> 
+        <events-to-fire-on>EXPIRED</events-to-fire-on> 
+        <events-to-fire-on>REMOVED</events-to-fire-on> 
+        <events-to-fire-on>EVICTED</events-to-fire-on> 
+      </listener>
+    </listeners>
+    <resources>
+      <heap unit="entries">1000</heap> 
+      <offheap unit="MB">10</offheap> 
+    </resources>
+  </cache-template>
+</config>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Accueil</title>
+<script type="text/javascript" 
+		th:src="@{../webjars/jquery/2.1.4/jquery.min.js}"></script>
+<link rel="stylesheet"
+	th:href="@{../webjars/bootstrap/3.3.6/css/bootstrap.min.css}"/>
+<script type="text/javascript" 
+		th:src="@{../webjars/bootstrap/3.3.6/js/bootstrap.min.js}"></script>
+</head>
+<body>
+	<div class="container-fluid">
+		<div th:replace="header :: header"></div>
+			<div class="panel panel-default">
+				<div class="panel-body">
+					<ul>
+						<li>profil dev : -Dspring.profiles.active=dev</li>
+						<li>login/mdp : admin/admin</li>
+					</ul>
+				</div>
+			</div>
+	</div>
+	<div id="result"></div>
+</body>
+</html>

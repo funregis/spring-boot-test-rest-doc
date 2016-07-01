@@ -1,0 +1,41 @@
+= Ressource Civilites
+
+== #GET# /api/civilites
+
+*requête*
+
+include::{snippets}/test-civilites/find-all/http-request.adoc[]
+
+*réponse*
+
+include::{snippets}/test-civilites/find-all/http-response.adoc[]
+
+*description de la réponse*
+
+include::{snippets}/test-civilites/find-all/response-fields.adoc[]
+
+*test curl*
+
+include::{snippets}/test-civilites/find-all/curl-request.adoc[]
+
+== #GET# /api/test-civilites/{entier}
+
+*description* 
+
+permet d'accéder à la civilité d'id technique {entier}
+
+*requête*
+
+include::{snippets}/test-civilites/find-by-id/http-request.adoc[]
+
+*réponse*
+
+include::{snippets}/test-civilites/find-by-id/http-response.adoc[]
+
+*description de la réponse*
+
+include::{snippets}/test-civilites/find-by-id/response-fields.adoc[]
+
+*test curl*
+
+include::{snippets}/test-civilites/find-by-id/curl-request.adoc[]

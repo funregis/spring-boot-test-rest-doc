@@ -1,0 +1,33 @@
+= Projet SPRING BOOT WS REST DOC - Description de l'API
+================
+:author: Régis LIMARE
+:data-uri:
+:icons: font
+
+== Objet du document
+
+Le présent document constitue les spécifications fonctionnelles de l'api REST pour l'application .
+
+== API REST
+
+l'API REST permet à chaque client d'utiliser l'application via des appels #http#.
+Le détail de l'API complète ci-dessous : 
+
+[cols="1,2", options="header"]
+|===
+
+|Ressource
+|Chemin
+
+|<<client/pays.doc#,pays>>
+|api/pays
+
+|<<client/civilites.doc#,civilites>>
+|api/civilites
+
+|<<client/adresses.doc#,adresses>>
+|api/adresses
+
+|===
+
+
